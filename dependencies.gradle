@@ -5,18 +5,18 @@ ext {
     koin_version = "2.0.1"
     retrofit_version = '2.5.0'
 
-    koinDependencied = [
+    koinDependencies = [
             koin_core: "org.koin:koin-core:$koin_version",
             koin_android: "org.koin:koin-android:$koin_version"
     ]
 
-    retrofitDependencied = [
+    retrofitDependencies = [
             retrofit: "com.squareup.retrofit2:retrofit:$retrofit_version",
             retrofitJsonConverter: "com.squareup.retrofit2:converter-gson:$retrofit_version",
             okHttpLogging: "com.squareup.okhttp3:logging-interceptor:$okhttp_logging"
     ]
 
-    liveDataDependencied = [
+    liveDataDependencies = [
             liveData: "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
     ]
 }
