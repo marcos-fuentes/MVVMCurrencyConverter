@@ -4,6 +4,8 @@ ext {
     //Libraries
     koin_version = "2.0.1"
     retrofit_version = '2.5.0'
+    okhttp_logging = '4.2.1'
+    lifecycle_version = '2.1.0'
 
     koinDependencies = [
             koin_core: "org.koin:koin-core:$koin_version",
