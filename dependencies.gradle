@@ -24,7 +24,6 @@ ext {
             retrofitJsonConverter : "com.squareup.retrofit2:converter-gson:$retrofit_version",
             retrofitRxJava2Adapter: "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version",
             okHttpLogging         : "com.squareup.okhttp3:logging-interceptor:$okhttp_logging",
-
     ]
 
     liveDataDependencies = [
