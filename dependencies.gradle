@@ -6,16 +6,24 @@ ext {
     retrofit_version = '2.5.0'
     okhttp_logging = '4.2.1'
     lifecycle_version = '2.1.0'
+    rxJavaVersion = '2.2.2'
+    rxAndroidVersion = '2.1.0'
 
     koinDependencies = [
-            koin_core: "org.koin:koin-core:$koin_version",
+            koin_core   : "org.koin:koin-core:$koin_version",
             koin_android: "org.koin:koin-android:$koin_version"
     ]
 
+    rxJavaDependencies = [
+            rxJava   : "io.reactivex.rxjava2:rxjava:$rxJavaVersion",
+            rxAndroid: "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+    ]
+
     retrofitDependencies = [
-            retrofit: "com.squareup.retrofit2:retrofit:$retrofit_version",
-            retrofitJsonConverter: "com.squareup.retrofit2:converter-gson:$retrofit_version",
-            okHttpLogging: "com.squareup.okhttp3:logging-interceptor:$okhttp_logging"
+            retrofit              : "com.squareup.retrofit2:retrofit:$retrofit_version",
+            retrofitJsonConverter : "com.squareup.retrofit2:converter-gson:$retrofit_version",
+            okHttpLogging         : "com.squareup.okhttp3:logging-interceptor:$okhttp_logging",
+            retrofitRxJava2Adapter: "com.squareup.retrofit2:adapter-rxjava2:$retrofit2Version"
     ]
 
     liveDataDependencies = [
