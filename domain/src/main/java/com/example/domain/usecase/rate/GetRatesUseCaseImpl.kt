@@ -1,8 +1,8 @@
 package com.example.domain.usecase.rate
 
 import androidx.lifecycle.LiveData
+import com.example.domain.common.ResultState
 import com.example.domain.models.RateEntity
-import com.example.domain.network.ResultState
 import com.example.domain.repository.rate.RatesRepository
 
 class GetRatesUseCaseImpl(
