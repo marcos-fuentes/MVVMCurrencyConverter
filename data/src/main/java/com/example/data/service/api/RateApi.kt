@@ -6,5 +6,5 @@ import retrofit2.http.GET
 
 interface RateApi {
  @GET("rates.json")
- fun getRates():LiveData<RateResponse>
+ fun getRates():LiveData<List<RateResponse>>
 }
