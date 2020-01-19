@@ -20,6 +20,7 @@ ext {
     lifecycle_version = '2.1.0'
     rxJavaVersion = '2.2.2'
     rxAndroidVersion = '2.1.0'
+    pagingVersion = '2.0.0'
 
     koinDependencies = [
             koin_core   : "org.koin:koin-core:$koin_version",
@@ -39,6 +40,11 @@ ext {
             retrofitJsonConverter : "com.squareup.retrofit2:converter-gson:$retrofit_version",
             retrofitRxJava2Adapter: "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version",
             okHttpLogging         : "com.squareup.okhttp3:logging-interceptor:$okhttp_logging",
+    ]
+
+    pagingDependencies = [
+            pagingRuntime: "androidx.paging:paging-runtime:$pagingVersion",
+            pagingRxJava : "androidx.paging:paging-rxjava2:$pagingVersion"
     ]
 
     liveDataDependencies = [

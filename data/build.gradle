@@ -41,6 +41,7 @@ dependencies {
     implementation retrofitDependencies.values()
     implementation liveDataDependencies.values()
     implementation rxJavaDependencies.values()
+    implementation pagingDependencies.values()
 
     //coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"

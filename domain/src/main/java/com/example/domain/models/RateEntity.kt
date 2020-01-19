@@ -1,6 +1,6 @@
 package com.example.domain.models
 
-class RateEntity(
+class RateEntity (
     val from: String,
     val to: String,
     val rate: String
