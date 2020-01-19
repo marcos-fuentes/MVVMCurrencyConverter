@@ -23,7 +23,10 @@ ext {
 
     koinDependencies = [
             koin_core   : "org.koin:koin-core:$koin_version",
-            koin_android: "org.koin:koin-android:$koin_version"
+            koin_android: "org.koin:koin-android:$koin_version",
+            koin_scope: "org.koin:koin-android-scope:$koin_version",
+            koin_view_model: "org.koin:koin-android-viewmodel:$koin_version",
+            koin_ext: "org.koin:koin-android-ext:$koin_version"
     ]
 
     rxJavaDependencies = [
