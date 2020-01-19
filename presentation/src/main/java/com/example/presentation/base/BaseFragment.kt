@@ -6,7 +6,7 @@ abstract class BaseFragment : Fragment() {
 
     protected abstract fun observeViewModel()
 
-    protected abstract fun getLayout()
+    protected abstract fun getLayout(): Int
 
     protected abstract fun bindViews()
 

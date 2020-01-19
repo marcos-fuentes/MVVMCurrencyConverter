@@ -21,6 +21,7 @@ ext {
     rxJavaVersion = '2.2.2'
     rxAndroidVersion = '2.1.0'
     pagingVersion = '2.0.0'
+    navigationVersion = '1.0.0-alpha06'
 
     koinDependencies = [
             koin_core   : "org.koin:koin-core:$koin_version",
@@ -49,5 +50,10 @@ ext {
 
     liveDataDependencies = [
             liveData: "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    ]
+
+    navigationDependencies = [
+            navigationFragment    : "android.arch.navigation:navigation-fragment-ktx:$navigationVersion",
+            navigationUi          : "android.arch.navigation:navigation-ui-ktx:$navigationVersion",
     ]
 }

@@ -12,7 +12,7 @@ class RateRepositoryImpl(private val rateApi: RateApi) : RatesRepository {
     override fun getRates(): LiveData<List<RateEntity>> {
         return mapLiveData(rateApi.getRates())
     }
-}
+
 
 fun mapLiveData(liveData: LiveData<List<RateResponse>>): LiveData<List<RateEntity>> {
     return MutableLiveData(liveData.value!!.map {
@@ -22,4 +22,5 @@ fun mapLiveData(liveData: LiveData<List<RateResponse>>): LiveData<List<RateEntit
             it.rate
         )
     })
+}
 }
