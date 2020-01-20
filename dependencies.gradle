@@ -39,8 +39,9 @@ ext {
     retrofitDependencies = [
             retrofit              : "com.squareup.retrofit2:retrofit:$retrofit_version",
             retrofitJsonConverter : "com.squareup.retrofit2:converter-gson:$retrofit_version",
-            retrofitRxJava2Adapter: "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version",
+            retrofitRxJava2Adapter: "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
             okHttpLogging         : "com.squareup.okhttp3:logging-interceptor:$okhttp_logging",
+
     ]
 
     pagingDependencies = [

@@ -25,11 +25,11 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField("String", "BASE_URL", "\"http://quiet-stone-2094.herokuapp.com\"")
+            buildConfigField("String", "BASE_URL", "\"https://quiet-stone-2094.herokuapp.com/\"")
         }
 
         debug {
-            buildConfigField("String", "BASE_URL", "\"http://quiet-stone-2094.herokuapp.com\"")
+            buildConfigField("String", "BASE_URL", "\"https://quiet-stone-2094.herokuapp.com/\"")
         }
     }
 }

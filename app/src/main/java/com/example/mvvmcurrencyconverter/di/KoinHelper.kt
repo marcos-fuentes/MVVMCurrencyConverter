@@ -4,6 +4,7 @@ import android.app.Application
 import com.example.data.di.module.apiModule
 import com.example.data.di.module.netModule
 import com.example.data.di.module.repositoryModule
+import com.example.presentation.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -20,7 +21,8 @@ object KoinHelper {
                 listOf(
                     netModule,
                     apiModule,
-                    repositoryModule
+                    repositoryModule,
+                    viewModelModule
                 )
             )
         }
