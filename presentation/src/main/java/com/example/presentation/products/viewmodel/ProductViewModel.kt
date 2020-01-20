@@ -3,11 +3,11 @@ package com.example.presentation.products.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.domain.models.Transaction
+import com.example.domain.models.TransactionEntity
 import com.example.domain.repository.transaction.TransactionsRepository
 
 class ProductViewModel(private val transactionsRepository: TransactionsRepository) : ViewModel() {
-    private lateinit var lvTransactions: MutableLiveData<List<Transaction>>
+    private lateinit var lvTransactions: MutableLiveData<List<TransactionEntity>>
 
     init {
         configLiveDataResponse()
@@ -15,10 +15,10 @@ class ProductViewModel(private val transactionsRepository: TransactionsRepositor
 
     private fun configLiveDataResponse() {
         lvTransactions =
-            transactionsRepository.getTransactions() as MutableLiveData<List<Transaction>>
+            transactionsRepository.getTransactions() as MutableLiveData<List<TransactionEntity>>
     }
 
-    public fun getTransactions(): LiveData<List<Transaction>> {
+    public fun getTransactions(): LiveData<List<TransactionEntity>> {
         return lvTransactions
     }
 
