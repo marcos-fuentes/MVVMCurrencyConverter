@@ -1,4 +1,4 @@
-package com.example.domain.models
+package com.example.domain.models.entity
 
 class RateEntity (
     val from: String,

@@ -1,7 +1,7 @@
 package com.example.presentation.products.fragment
 
 import androidx.lifecycle.Observer
-import com.example.domain.models.TransactionEntity
+import com.example.domain.models.entity.TransactionEntity
 import com.example.presentation.R
 import com.example.presentation.base.BaseFragment
 import com.example.presentation.products.viewmodel.ProductViewModel

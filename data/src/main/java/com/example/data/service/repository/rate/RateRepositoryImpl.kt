@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.data.service.api.RateApi
 import com.example.data.service.api.models.response.RateResponse
-import com.example.domain.models.RateEntity
+import com.example.domain.models.entity.RateEntity
 import com.example.domain.repository.rate.RatesRepository
 
 class RateRepositoryImpl(private val rateApi: RateApi) : RatesRepository {

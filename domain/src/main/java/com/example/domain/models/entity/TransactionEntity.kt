@@ -1,4 +1,4 @@
-package com.example.domain.models
+package com.example.domain.models.entity
 
 class TransactionEntity(
     val sku: String,

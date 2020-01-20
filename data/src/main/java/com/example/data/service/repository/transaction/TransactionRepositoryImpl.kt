@@ -4,7 +4,7 @@ package com.example.data.service.repository.transaction
 import androidx.lifecycle.MutableLiveData
 import com.example.data.service.api.TransactionApi
 import com.example.data.service.api.models.response.TransactionResponse
-import com.example.domain.models.TransactionEntity
+import com.example.domain.models.entity.TransactionEntity
 import com.example.domain.repository.transaction.TransactionsRepository
 import retrofit2.Call
 import retrofit2.Callback
