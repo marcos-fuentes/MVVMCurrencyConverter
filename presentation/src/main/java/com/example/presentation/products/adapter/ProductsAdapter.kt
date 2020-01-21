@@ -35,8 +35,9 @@ class ProductsAdapter(
 
 
         fun bind(productUIModel: ProductUIModel, clickListener: (ProductUIModel) -> Unit) {
-            itemView.productName.text = productUIModel.sku
-            itemView.productAmount.text = productUIModel.amount.toString()
+            itemView.tv_product_name.text = productUIModel.sku
+            itemView.tv_product_amount.text = productUIModel.amount.toString()
+            itemView.tv_product_currency.text = productUIModel.currency
             itemView.setOnClickListener { clickListener(productUIModel) }
         }
     }
