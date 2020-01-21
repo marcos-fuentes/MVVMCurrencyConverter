@@ -1,6 +1,9 @@
 package com.example.presentation.products.fragment
 
 import androidx.lifecycle.Observer
+import androidx.navigation.NavDirections
+import androidx.navigation.NavHost
+import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.domain.models.entity.RateEntity
 import com.example.domain.models.entity.TransactionEntity
@@ -63,6 +66,7 @@ class ProductFragment : BaseFragment() {
     }
 
     private fun productItemClicked(uiModel: ProductUIModel) {
-
+        var action:NavDirections = ProductFragmentDirections.startMyFragment(uiModel)
+        NavHostFragment.findNavController(this).navigate(action)
     }
 }
