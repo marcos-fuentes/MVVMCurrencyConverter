@@ -2,7 +2,6 @@ package com.example.presentation.mapper
 
 import com.example.domain.models.entity.RateEntity
 import com.example.domain.models.entity.TransactionEntity
-import com.example.domain.models.local.Product
 import com.example.presentation.model.ProductUIModel
 import java.math.BigDecimal
 

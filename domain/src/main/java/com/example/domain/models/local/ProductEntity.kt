@@ -1,22 +1,21 @@
 package com.example.domain.models.local
 
-import com.example.domain.models.entity.TransactionEntity
 import java.math.BigDecimal
 
-class Product(
+class ProductEntity(
     val sku: String,
     val currency: String
 )
 {
     var amount: BigDecimal = BigDecimal.ZERO
-    val transactionEntities: ArrayList<Transaction> = ArrayList()
+    val transactionEntities: ArrayList<TransactionEntity> = ArrayList()
 
     override fun equals(other: Any?): Boolean {
-        if (other == null || other !is Product) return false
+        if (other == null || other !is ProductEntity) return false
         return sku == other.sku
     }
 
-    fun addTransaction(transactionEntity: Transaction){
+    fun addTransaction(transactionEntity: TransactionEntity){
         this.transactionEntities.add(transactionEntity)
     }
 }

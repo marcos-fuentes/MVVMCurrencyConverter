@@ -1,8 +1,7 @@
 package com.example.domain.usecase
 
-import androidx.lifecycle.MutableLiveData
-import com.example.domain.models.local.Product
+import com.example.domain.models.local.ProductEntity
 
 interface ProductUseCase {
-    fun getProducts(): List<Product>
+    fun getProducts(): List<ProductEntity>
 }

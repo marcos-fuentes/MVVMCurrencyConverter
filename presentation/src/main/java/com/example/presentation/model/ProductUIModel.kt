@@ -1,6 +1,5 @@
 package com.example.presentation.model
 
-import com.example.domain.models.local.Transaction
 import java.io.Serializable
 import java.math.BigDecimal
 

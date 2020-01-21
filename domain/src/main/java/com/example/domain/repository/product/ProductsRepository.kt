@@ -1,11 +1,8 @@
 package com.example.domain.repository.product
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.domain.models.entity.RateEntity
-import com.example.domain.models.local.Product
-import io.reactivex.Single
+import com.example.domain.models.local.ProductEntity
 
 interface ProductsRepository {
-    fun getProducts(): MutableLiveData<List<Product?>>
+    fun getProducts(): MutableLiveData<List<ProductEntity?>>
 }

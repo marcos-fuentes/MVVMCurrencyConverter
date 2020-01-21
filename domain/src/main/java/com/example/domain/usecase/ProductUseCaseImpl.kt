@@ -1,10 +1,7 @@
 package com.example.domain.usecase
 
-import androidx.lifecycle.Observer
 import com.example.domain.models.entity.RateEntity
-import com.example.domain.models.entity.TransactionEntity
-import com.example.domain.models.local.Product
-import com.example.domain.models.local.Transaction
+import com.example.domain.models.local.ProductEntity
 import com.example.domain.repository.rate.RatesRepository
 import com.example.domain.repository.transaction.TransactionsRepository
 import java.math.BigDecimal
@@ -15,25 +12,25 @@ class ProductUseCaseImpl(
 ) : ProductUseCase {
 
 
-    override fun getProducts(): List<Product> {
+    override fun getProducts(): List<ProductEntity> {
         val lvRates = ratesRepository.getRates()
 
         val lvTransactions = transactionsRepository.getTransactions()
 
         // return getProductsFromTransaction(null, lvRates)
         //TODO: FINISH THE IMPLEMENTATION OF USE CASE
-        return ArrayList<Product>()
+        return ArrayList<ProductEntity>()
     }
 
     private fun getProductsFromTransaction(
         transactions: List<TransactionEntity?>,
         rates: List<RateEntity?>?
-    ): List<Product> {
+    ): List<ProductEntity> {
 
-        val products: ArrayList<Product>? = ArrayList()
+        val products: ArrayList<ProductEntity>? = ArrayList()
         transactions.forEach { transactionEntity: TransactionEntity? ->
-            val product: Product =
-                Product(
+            val product: ProductEntity =
+                ProductEntity(
                     transactionEntity!!.sku,
                     //TODO: SHOULD BE DYNAMIC INSTEAD OF MOCKED
                     "EUR"
@@ -86,8 +83,8 @@ class ProductUseCaseImpl(
     }
 
     //TODO: EXTRACT THIS MAPPER AND INJECT IT WITH KOIN
-    private fun transactionEntityToDataMapper(transactionEntity: TransactionEntity): Transaction {
-        return Transaction(transactionEntity.amount, transactionEntity.currency)
+    private fun transactionEntityToDataMapper(transactionEntity: TransactionEntity): com.example.domain.models.local.TransactionEntity {
+        return com.example.domain.models.local.TransactionEntity(transactionEntity.amount, transactionEntity.currency)
 
     }
 
