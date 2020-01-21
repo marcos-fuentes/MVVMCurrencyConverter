@@ -25,22 +25,13 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp"
-                    android:text="SKU ID: "
-                    android:textSize="17dp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black"/>
+                    android:text="@string/sku_id"
+                    style="@style/product_sku_description_style" />
 
                 <TextView
                     android:id="@+id/tv_product_name"
-                    android:layout_width="wrap_content"
                     tools:text="1750"
-                    android:textSize="17sp"
-                    android:textStyle="bold|italic"
-                    android:textColor="@color/blue_product"
-                    android:layout_height="wrap_content"/>
+                    style="@style/product_sku_value" />
 
             </LinearLayout>
 
@@ -52,21 +43,13 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp"
-                    android:text="Currency: "
-                    android:textSize="15dp"
-                    android:textColor="@android:color/black"/>
+                    android:text="@string/currency"
+                    style="@style/currency_description" />
 
                 <TextView
                     android:id="@+id/tv_product_currency"
-                    android:layout_width="wrap_content"
                     tools:text="EUR"
-                    android:textSize="15sp"
-                    android:textStyle="bold|italic"
-                    android:textColor="@color/blue_product"
-                    android:layout_height="wrap_content"/>
+                    style="@style/currency_value" />
 
             </LinearLayout>
 
@@ -81,22 +64,13 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:text="TOTAL: "
-                android:textSize="12dp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"/>
+                android:text="@string/total"
+                style="@style/total_description" />
 
             <TextView
                 android:id="@+id/tv_product_amount"
-                android:layout_width="wrap_content"
                 tools:text="200000"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/amount_green"
-                android:layout_height="wrap_content"/>
+                style="@style/total_value" />
 
         </LinearLayout>
 

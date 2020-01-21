@@ -8,4 +8,54 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="product_sku_description_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="product_sku_value">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textColor">@color/blue_product</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="currency_description">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="currency_value">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textColor">@color/blue_product</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="total_description">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="total_value">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/amount_green</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
 </resources>
