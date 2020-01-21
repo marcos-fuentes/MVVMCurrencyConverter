@@ -9,7 +9,7 @@ class Product(
 )
 {
     var amount: BigDecimal = BigDecimal.ZERO
-    private val transactionEntities: ArrayList<Transaction> = ArrayList()
+    val transactionEntities: ArrayList<Transaction> = ArrayList()
 
     override fun equals(other: Any?): Boolean {
         if (other == null || other !is Product) return false
