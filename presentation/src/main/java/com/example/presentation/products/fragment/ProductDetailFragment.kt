@@ -3,13 +3,12 @@ package com.example.presentation.products.fragment
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.domain.models.entity.RateEntity
-import com.example.domain.models.entity.TransactionEntity
 import com.example.presentation.R
 import com.example.presentation.base.BaseFragment
 import com.example.presentation.model.ProductUIModel
 import com.example.presentation.model.TransactionUIModel
-import kotlinx.android.synthetic.main.product_fragment.*
+import com.example.presentation.products.adapter.TransactionsAdapter
+import kotlinx.android.synthetic.main.product_detail_fragment.*
 
 class ProductDetailFragment : BaseFragment() {
 
@@ -25,14 +24,12 @@ class ProductDetailFragment : BaseFragment() {
         if (arguments != null) {
             val productUIModel: ProductUIModel =
                 ProductDetailFragmentArgs.fromBundle(arguments!!).productDetail
-        }
-    }
 
-
-    private fun setProductList() {
-        if (transactionList.isNotEmpty() && rateList.isNotEmpty()) {
-            // productList = productViewMapper.getProductsFromTransaction(transactionList, rateList)
+            transactionList = productUIModel.transactions
             updateRecyclerViewList()
+            tv_product_name.text = productUIModel.sku
+            tv_product_currency.text = productUIModel.currency.toUpperCase()
+            tv_product_amount.text = productUIModel.amount.toString()
         }
     }
 
@@ -41,9 +38,9 @@ class ProductDetailFragment : BaseFragment() {
     }
 
     private fun updateRecyclerViewList() {
-        //productAdapter = ProductsAdapter(context, productList)
-        rvProducts.layoutManager = LinearLayoutManager(context)
-        //   rvProducts.adapter = productAdapter
-        //   productAdapter.notifyDataSetChanged()
+        var transactionsAdapter = TransactionsAdapter(context, transactionList)
+        rvTransactions.layoutManager = LinearLayoutManager(context)
+        rvTransactions.adapter = transactionsAdapter
+        transactionsAdapter.notifyDataSetChanged()
     }
 }
