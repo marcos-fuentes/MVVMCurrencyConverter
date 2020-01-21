@@ -3,23 +3,33 @@ package com.example.presentation.products.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.domain.models.entity.RateEntity
 import com.example.domain.models.entity.TransactionEntity
+import com.example.domain.models.local.Product
+import com.example.domain.models.local.Transaction
+import com.example.domain.repository.rate.RatesRepository
 import com.example.domain.repository.transaction.TransactionsRepository
+import com.example.domain.usecase.ProductUseCase
+import java.math.BigDecimal
 
-class ProductViewModel(private val transactionsRepository: TransactionsRepository) : ViewModel() {
-    private lateinit var lvTransactions: MutableLiveData<List<TransactionEntity>>
+class ProductViewModel(private val repository: TransactionsRepository, private val ratesRepository: RatesRepository) : ViewModel() {
+    private var lvRates: MutableLiveData<List<RateEntity?>> = MutableLiveData()
+    private var lvTransactions: MutableLiveData<List<TransactionEntity?>> = MutableLiveData()
 
     init {
         configLiveDataResponse()
     }
 
     private fun configLiveDataResponse() {
-        lvTransactions =
-            transactionsRepository.getTransactions() as MutableLiveData<List<TransactionEntity>>
+        lvTransactions = repository.getTransactions()
+        lvRates = ratesRepository.getRates()
     }
 
-    public fun getTransactions(): LiveData<List<TransactionEntity>> {
+    fun getRates(): MutableLiveData<List<RateEntity?>> {
+        return lvRates
+    }
+
+    fun getTransactions(): MutableLiveData<List<TransactionEntity?>> {
         return lvTransactions
     }
-
 }
