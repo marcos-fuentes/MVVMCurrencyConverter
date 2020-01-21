@@ -1,6 +1,7 @@
 package com.example.data.service.repository.transaction
 
 
+import androidx.lifecycle.MutableLiveData
 import com.example.data.service.api.TransactionApi
 import com.example.data.service.api.models.response.TransactionResponse
 import com.example.domain.models.entity.TransactionEntity
@@ -12,8 +13,8 @@ import retrofit2.Response
 class TransactionRepositoryImpl(private val transactionApi: TransactionApi) :
     TransactionsRepository {
 
-    override fun getTransactions(): List<TransactionEntity?> {
-        var transactions: List<TransactionEntity?> = ArrayList()
+    override fun getTransactions(): MutableLiveData<List<TransactionEntity?>> {
+        var transactions: MutableLiveData<List<TransactionEntity?>> = MutableLiveData()
         transactionApi.getTransaction().enqueue(object : Callback<List<TransactionResponse>> {
             override fun onFailure(call: Call<List<TransactionResponse>>, t: Throwable) {
                 t.message
@@ -24,7 +25,7 @@ class TransactionRepositoryImpl(private val transactionApi: TransactionApi) :
                 response: Response<List<TransactionResponse>>
             ) {
                 if (response.isSuccessful) {
-                    transactions = responseToEntityMapper(response.body())
+                    transactions.value = responseToEntityMapper(response.body())
                 }
             }
 

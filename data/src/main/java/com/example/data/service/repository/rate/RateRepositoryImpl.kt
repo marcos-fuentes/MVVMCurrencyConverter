@@ -11,8 +11,8 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class RateRepositoryImpl(private val rateApi: RateApi) : RatesRepository {
-    override fun getRates(): List<RateEntity?>? {
-        var rates: List<RateEntity?>? = ArrayList()
+    override fun getRates(): MutableLiveData<List<RateEntity?>> {
+        var rates: MutableLiveData<List<RateEntity?>> = MutableLiveData()
         rateApi.getRates().enqueue(object : Callback<List<RateResponse>> {
             override fun onFailure(call: Call<List<RateResponse>>, t: Throwable) {
                 t.message
@@ -23,7 +23,7 @@ class RateRepositoryImpl(private val rateApi: RateApi) : RatesRepository {
                 response: Response<List<RateResponse>>
             ) {
                 if (response.isSuccessful) {
-                    rates = responseToEntityMapper(response.body())
+                    rates.value = responseToEntityMapper(response.body())
                 }
             }
 

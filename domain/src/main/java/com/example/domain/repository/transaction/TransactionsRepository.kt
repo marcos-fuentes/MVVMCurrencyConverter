@@ -5,5 +5,5 @@ import com.example.domain.models.entity.TransactionEntity
 
 
 interface TransactionsRepository {
-    fun getTransactions(): List<TransactionEntity?>
+    fun getTransactions(): MutableLiveData<List<TransactionEntity?>>
 }

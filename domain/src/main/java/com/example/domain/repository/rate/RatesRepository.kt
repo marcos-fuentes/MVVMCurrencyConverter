@@ -6,5 +6,5 @@ import com.example.domain.models.entity.RateEntity
 import io.reactivex.Single
 
 interface RatesRepository {
-    fun getRates(): List<RateEntity?>?
+    fun getRates(): MutableLiveData<List<RateEntity?>>
 }
