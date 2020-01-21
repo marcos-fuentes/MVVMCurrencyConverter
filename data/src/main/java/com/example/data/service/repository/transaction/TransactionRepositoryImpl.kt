@@ -1,7 +1,6 @@
 package com.example.data.service.repository.transaction
 
 
-import androidx.lifecycle.MutableLiveData
 import com.example.data.service.api.TransactionApi
 import com.example.data.service.api.models.response.TransactionResponse
 import com.example.domain.models.entity.TransactionEntity
@@ -13,8 +12,8 @@ import retrofit2.Response
 class TransactionRepositoryImpl(private val transactionApi: TransactionApi) :
     TransactionsRepository {
 
-    override fun getTransactions(): MutableLiveData<List<TransactionEntity?>> {
-        val transactions: MutableLiveData<List<TransactionEntity?>> = MutableLiveData()
+    override fun getTransactions(): List<TransactionEntity?> {
+        var transactions: List<TransactionEntity?> = ArrayList()
         transactionApi.getTransaction().enqueue(object : Callback<List<TransactionResponse>> {
             override fun onFailure(call: Call<List<TransactionResponse>>, t: Throwable) {
                 t.message
@@ -25,7 +24,7 @@ class TransactionRepositoryImpl(private val transactionApi: TransactionApi) :
                 response: Response<List<TransactionResponse>>
             ) {
                 if (response.isSuccessful) {
-                    transactions.value = responseToEntityMapper(response.body())
+                    transactions = responseToEntityMapper(response.body())
                 }
             }
 
@@ -34,7 +33,7 @@ class TransactionRepositoryImpl(private val transactionApi: TransactionApi) :
     }
 
     //TODO: EXTRACT THIS MAPPER AND INJECT IT WITH KOIN
-    private fun responseToEntityMapper(list: List<TransactionResponse>?): List<TransactionEntity?>? {
+    private fun responseToEntityMapper(list: List<TransactionResponse>?): List<TransactionEntity?> {
         if (list != null) {
             return list.map { transactionResponse ->
                 TransactionEntity(
@@ -44,7 +43,7 @@ class TransactionRepositoryImpl(private val transactionApi: TransactionApi) :
                 )
             }
         }
-        return null
+        return ArrayList()
     }
 }
 
