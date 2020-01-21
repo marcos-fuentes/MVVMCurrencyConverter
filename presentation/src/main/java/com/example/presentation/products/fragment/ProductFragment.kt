@@ -1,9 +1,7 @@
 package com.example.presentation.products.fragment
 
-import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.domain.models.entity.RateEntity
 import com.example.domain.models.entity.TransactionEntity
 import com.example.presentation.R
