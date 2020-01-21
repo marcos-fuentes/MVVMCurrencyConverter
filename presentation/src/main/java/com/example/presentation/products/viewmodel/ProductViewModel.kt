@@ -10,9 +10,12 @@ import com.example.domain.models.local.Transaction
 import com.example.domain.repository.rate.RatesRepository
 import com.example.domain.repository.transaction.TransactionsRepository
 import com.example.domain.usecase.ProductUseCase
+import com.example.presentation.mapper.ProductViewMapper
+import com.example.presentation.model.ProductUIModel
 import java.math.BigDecimal
 
-class ProductViewModel(private val repository: TransactionsRepository, private val ratesRepository: RatesRepository) : ViewModel() {
+class ProductViewModel(private val repository: TransactionsRepository,
+                       private val ratesRepository: RatesRepository) : ViewModel() {
     private var lvRates: MutableLiveData<List<RateEntity?>> = MutableLiveData()
     private var lvTransactions: MutableLiveData<List<TransactionEntity?>> = MutableLiveData()
 

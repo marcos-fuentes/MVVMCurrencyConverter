@@ -1,10 +1,11 @@
 package com.example.presentation.mapper
 
+import com.example.domain.models.entity.TransactionEntity
 import com.example.domain.models.local.Transaction
 import com.example.presentation.model.TransactionUIModel
 
 class TransactionViewMapper {
-    fun mapTo(transactionList: List<Transaction>): List<TransactionUIModel> {
-        return transactionList.map { TransactionUIModel(it.amount, it.currency) }
+    fun mapTo(transaction: TransactionEntity): TransactionUIModel {
+        return TransactionUIModel(transaction.amount, transaction.currency)
     }
 }

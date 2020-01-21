@@ -4,6 +4,7 @@ import android.app.Application
 import com.example.data.di.module.apiModule
 import com.example.data.di.module.netModule
 import com.example.data.di.module.repositoryModule
+import com.example.presentation.di.viewMapperModule
 import com.example.presentation.di.useCaseModule
 import com.example.presentation.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
@@ -24,7 +25,8 @@ object KoinHelper {
                     apiModule,
                     repositoryModule,
                     viewModelModule,
-                    useCaseModule
+                    useCaseModule,
+                    viewMapperModule
                 )
             )
         }

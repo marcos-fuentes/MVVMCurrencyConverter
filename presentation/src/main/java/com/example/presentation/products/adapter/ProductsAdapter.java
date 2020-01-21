@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.domain.models.local.Product;
 import com.example.presentation.R;
+import com.example.presentation.model.ProductUIModel;
 
 
 import java.util.ArrayList;
@@ -18,9 +19,9 @@ import java.util.ArrayList;
 public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ProductViewHolder> {
 
     Context context;
-    ArrayList<Product> products;
+    ArrayList<ProductUIModel> products;
 
-    public ProductsAdapter(Context context, ArrayList<Product> products) {
+    public ProductsAdapter(Context context, ArrayList<ProductUIModel> products) {
         this.context = context;
         this.products = products;
     }
