@@ -8,17 +8,24 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.presentation.products.fragment.ProductFragment"
+        android:label="homeFragment"
         tools:layout="@layout/product_fragment">
-       <action android:id="@+id/startMyFragment"
-        app:destination="@+id/productDetailFragment">
-        <argument
-            android:name="productDetail"
-            app:argType="com.example.presentation.model.ProductUIModel" />
-    </action>
+        <action
+            android:id="@+id/startMyFragment"
+            app:destination="@+id/productDetailFragment">
+            <argument
+                android:name="productDetail"
+                app:argType="com.example.presentation.model.ProductUIModel" />
+        </action>
     </fragment>
 
     <fragment
         android:id="@+id/productDetailFragment"
         android:name="com.example.presentation.products.fragment.ProductDetailFragment"
-        tools:layout="@layout/product_fragment"/>
+        tools:layout="@layout/product_fragment">
+
+        <argument
+            android:name="productDetail"
+            app:argType="com.example.presentation.model.ProductUIModel" />
+    </fragment>
 </navigation>

@@ -21,14 +21,15 @@ ext {
     rxJavaVersion = '2.2.2'
     rxAndroidVersion = '2.1.0'
     pagingVersion = '2.0.0'
-    navigationVersion = '1.0.0-alpha06'
+    navigationVersion = '2.1.0-alpha01'
+    frag_version = '1.2.0-beta02'
 
     koinDependencies = [
-            koin_core   : "org.koin:koin-core:$koin_version",
-            koin_android: "org.koin:koin-android:$koin_version",
-            koin_scope: "org.koin:koin-android-scope:$koin_version",
+            koin_core      : "org.koin:koin-core:$koin_version",
+            koin_android   : "org.koin:koin-android:$koin_version",
+            koin_scope     : "org.koin:koin-android-scope:$koin_version",
             koin_view_model: "org.koin:koin-android-viewmodel:$koin_version",
-            koin_ext: "org.koin:koin-android-ext:$koin_version"
+            koin_ext       : "org.koin:koin-android-ext:$koin_version"
     ]
 
     rxJavaDependencies = [
@@ -54,7 +55,8 @@ ext {
     ]
 
     navigationDependencies = [
-            navigationFragment    : "android.arch.navigation:navigation-fragment-ktx:$navigationVersion",
-            navigationUi          : "android.arch.navigation:navigation-ui-ktx:$navigationVersion",
+            navigationFragment: "androidx.navigation:navigation-fragment-ktx:2.2.0-alpha01",
+            navigationUI      : "androidx.navigation:navigation-ui-ktx:2.2.0-alpha01",
+            fragment          : "androidx.fragment:fragment:$frag_version"
     ]
 }

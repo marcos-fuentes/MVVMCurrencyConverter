@@ -41,6 +41,7 @@ dependencies {
     implementation retrofitDependencies.values()
     implementation liveDataDependencies.values()
     implementation rxJavaDependencies.values()
+    implementation navigationDependencies.values()
 
     implementation 'androidx.appcompat:appcompat:1.0.2'
     testImplementation 'junit:junit:4.12'
