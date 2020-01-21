@@ -9,6 +9,16 @@
         android:id="@+id/homeFragment"
         android:name="com.example.presentation.products.fragment.ProductFragment"
         tools:layout="@layout/product_fragment">
+       <action android:id="@+id/startMyFragment"
+        app:destination="@+id/productDetailFragment">
+        <argument
+            android:name="productDetail"
+            app:argType="com.example.presentation.model.ProductUIModel" />
+    </action>
     </fragment>
 
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.example.presentation.products.fragment.ProductDetailFragment"
+        tools:layout="@layout/product_fragment"/>
 </navigation>

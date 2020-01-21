@@ -8,15 +8,15 @@ class ProductEntity(
 )
 {
     var amount: BigDecimal = BigDecimal.ZERO
-    val transactionEntities: ArrayList<TransactionEntity> = ArrayList()
+    val transactionItemEntities: ArrayList<TransactionItemEntity> = ArrayList()
 
     override fun equals(other: Any?): Boolean {
         if (other == null || other !is ProductEntity) return false
         return sku == other.sku
     }
 
-    fun addTransaction(transactionEntity: TransactionEntity){
-        this.transactionEntities.add(transactionEntity)
+    fun addTransaction(transactionItemEntity: TransactionItemEntity){
+        this.transactionItemEntities.add(transactionItemEntity)
     }
 }
 

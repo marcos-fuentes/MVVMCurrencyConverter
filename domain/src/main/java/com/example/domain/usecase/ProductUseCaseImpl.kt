@@ -1,6 +1,7 @@
 package com.example.domain.usecase
 
 import com.example.domain.models.entity.RateEntity
+import com.example.domain.models.entity.TransactionEntity
 import com.example.domain.models.local.ProductEntity
 import com.example.domain.repository.rate.RatesRepository
 import com.example.domain.repository.transaction.TransactionsRepository
@@ -83,8 +84,8 @@ class ProductUseCaseImpl(
     }
 
     //TODO: EXTRACT THIS MAPPER AND INJECT IT WITH KOIN
-    private fun transactionEntityToDataMapper(transactionEntity: TransactionEntity): com.example.domain.models.local.TransactionEntity {
-        return com.example.domain.models.local.TransactionEntity(transactionEntity.amount, transactionEntity.currency)
+    private fun transactionEntityToDataMapper(transactionEntity: TransactionEntity): com.example.domain.models.local.TransactionItemEntity {
+        return com.example.domain.models.local.TransactionItemEntity(transactionEntity.amount, transactionEntity.currency)
 
     }
 

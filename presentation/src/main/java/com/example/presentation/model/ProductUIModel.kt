@@ -1,5 +1,6 @@
 package com.example.presentation.model
 
+import com.example.domain.models.local.ProductEntity
 import java.io.Serializable
 import java.math.BigDecimal
 
@@ -12,5 +13,10 @@ class ProductUIModel(
 
     fun addTransaction(transactionEntity: TransactionUIModel) {
         this.transactions.add(transactionEntity)
+    }
+
+    override fun equals(other: Any?): Boolean {
+        if (other == null || other !is ProductUIModel) return false
+        return sku == other.sku
     }
 }

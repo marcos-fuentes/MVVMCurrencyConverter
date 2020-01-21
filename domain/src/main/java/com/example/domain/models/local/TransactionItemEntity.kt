@@ -1,6 +1,6 @@
 package com.example.domain.models.local
 
-class TransactionEntity(
+class TransactionItemEntity(
     val amount: String,
     val currency: String
 )
